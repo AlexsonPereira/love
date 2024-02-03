@@ -50,7 +50,9 @@
     const btn = document.getElementById("nao")
     const btnS = document.getElementById("sim")
     const nome = window.prompt("Digite o nome da sua vidinha")
-    document.getElementById("bn").innerText =`Boa noite ${nome}`
+    if(nome){
+        document.getElementById("bn").innerText =`Boa noite ${nome}`
+    }
     btnS.addEventListener("click", ()=>{
         window.alert("Obrigado por escolher ficar na merda comigo")
 
