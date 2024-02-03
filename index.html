@@ -44,14 +44,24 @@
 
 
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" ></script>
 <script>
+    console.log(moment().hour())
+    if(moment().hour() >= 5 && moment().hour() <= 12){
+        bn.innerText = "Bom dia"
+    }else if(moment().hour() > 12 && moment().hour() < 18){
+        bn.innerText = "Boa Tarde"
+    }else{
+        bn.innerText = "Boa Noite"
+    }
+    console.log();
     const audio = new Audio("musica.mp3")
 
     const btn = document.getElementById("nao")
     const btnS = document.getElementById("sim")
     const nome = window.prompt("Digite o nome da sua companheira")
     if(nome){
-        document.getElementById("bn").innerText =`Boa noite ${nome}`
+        document.getElementById("bn").innerText +=` ${nome}`
     }
     btnS.addEventListener("click", ()=>{
         audio.play()
