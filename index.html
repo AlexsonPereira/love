@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love</title>
+</head>
+<body style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; background-color: white; padding: 16px; border-radius: 8px; box-shadow: 0px 0px 16px -1px rgba(0,0,0,0.42); gap: 16px;">
+        <h3 id="bn" style="font-size: 64px;">Boa noite</h3>
+        <span style="font-size: 32px;">Quer namorar comigo?</span>
+        <div style="width: 308px;">
+            <button class="btnPrimary" id="sim" style="margin-right: 8px;">Sim</button>
+            <button class="btnPrimary" id="nao">Não</button>
+        </div>
+        
+    </div>
+</body>
+<style>
+
+
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+        background-image: url(https://img1.picmix.com/output/pic/normal/9/4/1/2/5502149_2d231.gif);
+        background-size: cover;
+    }
+    .btnPrimary {
+        width: 150px;
+        height: 40px;
+        border: none;
+        background-color: hotpink;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+
+
+</style>
+<script>
+    
+
+    const btn = document.getElementById("nao")
+    const btnS = document.getElementById("sim")
+    const nome = window.prompt("Digite o nome da sua vidinha")
+    document.getElementById("bn").innerText =`Boa noite ${nome}`
+    btnS.addEventListener("click", ()=>{
+        window.alert("Obrigado por escolher ficar na merda comigo")
+
+    })
+    btn.style.position = "absolute"
+    console.log(Math.floor(Math.random()))
+    window.innerWidth
+    btn.addEventListener("mouseenter", (e) => {
+        btn.style.top = `${Math.floor(Math.random() * 100)}%`
+        btn.style.right = `${Math.floor(Math.random() * 100)}%`
+        console.log(btn.style.top)
+        console.log(btn.style.right)
+    })
+</script>
+</html>
