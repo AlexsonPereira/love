@@ -45,16 +45,18 @@
 
 </style>
 <script>
-    
+    const audio = new Audio("musica.mp3")
 
     const btn = document.getElementById("nao")
     const btnS = document.getElementById("sim")
-    const nome = window.prompt("Digite o nome da sua vidinha")
+    const nome = window.prompt("Digite o nome da sua companheira")
     if(nome){
         document.getElementById("bn").innerText =`Boa noite ${nome}`
     }
     btnS.addEventListener("click", ()=>{
+        audio.play()
         window.alert("Obrigado por escolher ficar na merda comigo")
+
 
     })
     btn.style.position = "absolute"
